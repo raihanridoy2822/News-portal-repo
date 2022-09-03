@@ -1,12 +1,14 @@
-const loadNews = () => {
-    fetch('https://openapi.programming-hero.com/api/news/category/01')
+const loadNews = (tap) => {
+    const url = `https://openapi.programming-hero.com/api/news/category/${tap}`
+    fetch(url)
         .then(res => res.json())
         .then(data => displayNews(data.data))
 }
 const displayNews = newss => {
     const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = '';
     newss.forEach(news => {
-        console.log(news);
+        // console.log(news);
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('col');
         newsDiv.innerHTML = `
@@ -22,4 +24,42 @@ const displayNews = newss => {
         newsContainer.appendChild(newsDiv);
     })
 }
-loadNews();
+const homeBtn = () => {
+    const alb = '08';
+    loadNews(alb);
+}
+const breakingBtn = () => {
+    const brk = '01';
+    loadNews(brk);
+}
+const regularBtn = () => {
+    const rgl = '02';
+    loadNews(rgl);
+}
+const interBtn = () => {
+    const itn = '03';
+    loadNews(itn);
+}
+const sportsBtn = () => {
+    const spt = '04';
+    loadNews(spt);
+}
+const entertainmentBtn = () => {
+    const ent = '05';
+    loadNews(ent);
+}
+const cultureBtn = () => {
+    const cul = '06';
+    loadNews(cul);
+}
+const artsBtn = () => {
+    const art = '07';
+    loadNews(art);
+}
+const allBtn = () => {
+    const alb = '08';
+    loadNews(alb);
+}
+
+
+// loadNews();
