@@ -13,9 +13,10 @@ const displayNews = newss => {
         <div class="card-body">
         <img src="${news.thumbnail_url}" class="img-fluid rounded-start" alt="...">
                             <h5 class="card-title">${news.title}</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="card-text">${news.details}</p>
+                            <p class="card-text"><small class="text-muted">${news.author.name}
+                            <p class="card-text"><small class="text-muted">${news.author.published_date}
+                            </small></p></small></p>
                         </div>
         `;
         newsContainer.appendChild(newsDiv);
