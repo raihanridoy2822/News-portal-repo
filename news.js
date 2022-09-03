@@ -15,10 +15,14 @@ const displayNews = newss => {
         <div class="card-body">
         <img src="${news.thumbnail_url}" class="img-fluid rounded-start" alt="...">
                             <h5 class="card-title">${news.title}</h5>
-                            <p class="card-text">${news.details}</p>
+                            <p class="card-text">${news.details.slice(0, 200) + '...'}</p>
+                            <img class="image-size" src="${news.author.img}" class="img-fluid rounded-start" alt="...">
                             <p class="card-text"><small class="text-muted">${news.author.name}
                             <p class="card-text"><small class="text-muted">${news.author.published_date}
+                            <a href="<i class="fa-solid fa-eye"></i>">${news.author.total_view}</a>
+
                             </small></p></small></p>
+            
                         </div>
         `;
         newsContainer.appendChild(newsDiv);
