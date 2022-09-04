@@ -20,8 +20,7 @@ const displayNews = newss => {
                             <p class="card-text"><small class="text-muted">${news.author.name}
                             <p class="card-text"><small class="text-muted">${news.author.published_date}
                             
-                            <p class="card-text"><small class="text-muted">${news.author.view}
-
+                        
                             </small></p></small></p>
             
                         </div>
