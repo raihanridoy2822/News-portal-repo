@@ -19,7 +19,8 @@ const displayNews = newss => {
                             <img class="image-size" src="${news.author.img}" class="img-fluid rounded-start" alt="...">
                             <p class="card-text"><small class="text-muted">${news.author.name}
                             <p class="card-text"><small class="text-muted">${news.author.published_date}
-                            <a href="<i class="fa-solid fa-eye"></i>">${news.author.total_view}</a>
+                            
+                            <p class="card-text"><small class="text-muted">${news.author.view}
 
                             </small></p></small></p>
             
